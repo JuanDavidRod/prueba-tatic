@@ -1,0 +1,36 @@
+h2{
+    font-size: 22px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+h4{
+    font-size: 18px;
+}
+
+p{
+    margin: 5px 0px;
+    font-size: 15px;
+}
+
+strong{
+    font-size: 14px;
+}
+
+.pay_information{
+    width: 90%;
+    margin: auto;
+}
+
+.pay{
+    border: #ccc 2px solid;
+    border-radius: 5px;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.pay_information__summary p{
+    color: #9c9c9c;
+}
