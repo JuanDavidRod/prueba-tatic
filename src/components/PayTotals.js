@@ -1,18 +1,21 @@
 import React from 'react'
 
-const PayTotals = () => {
+const PayTotals = ({numberTikets, tariffEvent}) => {
+    const numberFormat = new Intl.NumberFormat('es-ES');
+    const total = tariffEvent * numberTikets
+
   return (
     <article className='pay pay_information_totals'>
         <div className='d-flex justify-content-between mb-3 '>
             <h2>Total</h2>
-            <h2>$ 549.11</h2>
+            <h2>$ {numberFormat.format(total)}</h2>
         </div>
 
         <div className='mb-4 tickets_info'>
             <h3>Boletos</h3>
             <div className='d-flex justify-content-between'>
-                <p>Total boletos: $ 229.00 &times; 2</p>
-                <p>$ 458.00</p>
+                <p>Total boletos: $ {tariffEvent} &times; {numberTikets}</p>
+                <p>$ {numberFormat.format(total)}</p>
             </div>
         </div>
 
@@ -24,12 +27,12 @@ const PayTotals = () => {
         <div className='mb-4 seller_info'>
             <h3>Impuestos</h3>
             <div className='d-flex justify-content-between'>
-                <p>Total boletos: $ 229.00 &times; 2</p>
-                <p>$ 458.00</p>
+                <p>Total boletos: $000.00 &times; 2</p>
+                <p>$ 000.00</p>
             </div>
             <div className='d-flex justify-content-between'>
                 <p>Uso de pagina web: </p>
-                <p>$ 1.00</p>
+                <p>$ 0.00</p>
             </div>
         </div>
 
